@@ -1,8 +1,7 @@
-import react from "react";
 import AboutCard from "@/components/aboutCard";
 
 
-const about= () => {
+const About= () => {
     return (
         <div className="about-background">
             <AboutCard />
@@ -12,3 +11,4 @@ const about= () => {
         </div>
     )
 }
+export default About;
