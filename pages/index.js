@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HeroSection from "@/components/HeroSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       </Head>
       <Navbar />
       <Footer />
+      <HeroSection />
     </div>
   );
 };

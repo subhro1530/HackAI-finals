@@ -4,7 +4,17 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
-  font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
   /* Add more styles as needed */
 }
+/* styles/AboutCard.module.css */
+
