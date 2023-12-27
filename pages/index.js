@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Your App Name</title>
+        <title>ChatMate</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
