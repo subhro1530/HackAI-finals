@@ -16,8 +16,8 @@ const Home = () => {
         />
       </Head>
       <Navbar />
-      <Footer />
       <HeroSection />
+      <Footer />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Footer = () => {
     >
       <Box>
         <Link href="/">
-          <Image src="/icon.png" alt="Logo" width={50} height={50}/>
+          <Image src="/icon.png" alt="Logo" width={50} height={50} />
         </Link>
       </Box>
 
@@ -32,7 +32,7 @@ const Footer = () => {
           <FaTwitter size="1.5em" color="white" />
         </Link>
         <Link href="https://www.instagram.com/" target="_blank">
-          <FaInstagram size="1.5em" color="white" _hover="bgColor: pink"/>
+          <FaInstagram size="1.5em" color="white" _hover="bgColor: pink" />
         </Link>
       </Flex>
 

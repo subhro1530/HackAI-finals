@@ -64,10 +64,9 @@ const Navbar = () => {
         bg="transparent"
         // maxW="100vw"
         mx={0}
-        height={navbarHeight}
+        // height={navbarHeight}
         flexDirection="row"
         width="100%"
-        flexDirection={{ base: "column", md: "row" }}
       >
         <Box mb={{ base: "4", md: "0" }}>
           <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
@@ -231,7 +230,7 @@ const Navbar = () => {
             </DrawerContent>
           </Drawer>
         </Box>
-        <Divider opacity="0.3" />
+        <Divider opacity="0.3" marginTop="0.5rem" />
       </Flex>
     </ChakraProvider>
   );
