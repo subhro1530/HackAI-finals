@@ -5,9 +5,6 @@ const About= () => {
     return (
         <div className="about-background">
             <AboutCard />
-            <AboutCard />
-            <AboutCard />
-            <AboutCard />
         </div>
     )
 }

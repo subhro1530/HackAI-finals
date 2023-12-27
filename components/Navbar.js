@@ -41,8 +41,6 @@ const theme = extendTheme({
   },
 });
 
-const navbarHeight = "60px";
-
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -63,17 +61,15 @@ const Navbar = () => {
         justify="space-between"
         wrap="wrap"
         p={4}
-        maxH="10vh"
         color="white"
         bg="transparent"
         maxW="100vw"
         mx={0}
-        height={navbarHeight}
-        flexDirection="row"
+        flexDirection={{ base: "column", md: "row" }}
       >
-        <Box>
+        <Box mb={{ base: "4", md: "0" }}>
           <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
-            <Image src="/path/to/logo.png" alt="Logo" width={50} height={50} />
+            <Image src="/logo.png" alt="Logo" width={200} height={50} />
           </ChakraLink>
         </Box>
         <Box
@@ -117,8 +113,6 @@ const Navbar = () => {
                 color: "black",
               }}
               transition="0.3s"
-              paddingX={4}
-              paddingY={2}
               borderRadius="md"
               cursor="pointer"
             >
@@ -134,8 +128,6 @@ const Navbar = () => {
                 color: "black",
               }}
               transition="0.3s"
-              paddingX={4}
-              paddingY={2}
               borderRadius="md"
               cursor="pointer"
             >
@@ -144,7 +136,10 @@ const Navbar = () => {
           </ChakraLink>
         </Box>
         {/* Hamburger icon for mobile view */}
-        <Box display={{ base: "block", md: "none" }}>
+        <Box
+          display={{ base: "block", md: "none" }}
+          marginBottom={{ base: "4", md: "0" }}
+        >
           <IconButton
             icon={<HamburgerIcon />}
             aria-label="Open menu"
@@ -152,7 +147,6 @@ const Navbar = () => {
             variant="ghost"
             color="white"
             fontSize="24px"
-            marginBottom={{ base: "10rem", md: "unset" }}
             _hover={{ backgroundColor: "black", color: "white" }}
           />
           <Drawer

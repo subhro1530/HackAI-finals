@@ -14,7 +14,7 @@ const HeroSection = () => {
       color="white"
       py={{ base: 10, md: 20 }} // Adjust padding for different screen sizes
       px={5}
-      height={{ base: "auto", md: "80vh" }} // Adjust height for different screen sizes
+      minHeight={{ base: "auto", md: "80vh" }} // Adjust height for different screen sizes
       position="relative"
       overflow="hidden"
     >
@@ -38,7 +38,9 @@ const HeroSection = () => {
           Your Personalized Support AI
         </Heading>
         <Text fontSize={{ base: "md", md: "xl" }} mb={{ base: 6, md: 8 }}>
-          Empowering you with personalized assistance and intelligent support.
+          Experience unparalleled personalized support with our advanced AI
+          system. Our chatbot is designed to cater to your unique needs,
+          providing intelligent assistance 24/7.
         </Text>
         <Link href="/chat">
           <Button colorScheme="purple" size={{ base: "md", md: "lg" }}>
