@@ -15,6 +15,7 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
+  Divider,
 } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -30,7 +31,9 @@ const theme = extendTheme({
         bg: 'url("/navbar_bg.png")',
         bgSize: "cover",
         bgPosition: "center",
+        backgroundRepeat: "no-repeat",
         color: "white",
+        width: "100vw",
         margin: 0,
         padding: 0,
       },
@@ -38,7 +41,7 @@ const theme = extendTheme({
   },
 });
 
-const navbarHeight = "60px"; // Set your desired height
+const navbarHeight = "60px";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -59,27 +62,26 @@ const Navbar = () => {
         align="center"
         justify="space-between"
         wrap="wrap"
-              p={4}
-              maxH="10vh"
+        p={4}
+        maxH="10vh"
         color="white"
         bg="transparent"
-        borderBottom="1px solid rgba(255, 255, 255, 0.1)"
-        maxW="95vw"
+        maxW="100vw"
         mx={0}
         height={navbarHeight}
+        flexDirection="row"
       >
         <Box>
-          <ChakraLink href="/">
+          <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
             <Image src="/path/to/logo.png" alt="Logo" width={50} height={50} />
           </ChakraLink>
         </Box>
-        <Spacer />
         <Box
           display={{ base: "none", md: "flex" }}
           alignItems="center"
           fontSize="md"
         >
-          <ChakraLink href="/">
+          <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
             <Box
               mx={4}
               _hover={{ color: "#FFB6C1", borderBottom: "2px solid #FFB6C1" }}
@@ -88,7 +90,7 @@ const Navbar = () => {
               Home
             </Box>
           </ChakraLink>
-          <ChakraLink href="/about">
+          <ChakraLink href="/about" _hover={{ borderBottom: "none" }}>
             <Box
               mx={4}
               _hover={{ color: "#FFB6C1", borderBottom: "2px solid #FFB6C1" }}
@@ -97,7 +99,7 @@ const Navbar = () => {
               About
             </Box>
           </ChakraLink>
-          <ChakraLink href="/contact">
+          <ChakraLink href="/contact" _hover={{ borderBottom: "none" }}>
             <Box
               mx={4}
               _hover={{ color: "#FFB6C1", borderBottom: "2px solid #FFB6C1" }}
@@ -106,7 +108,7 @@ const Navbar = () => {
               Contact
             </Box>
           </ChakraLink>
-          <ChakraLink href="/signin">
+          <ChakraLink href="/signin" _hover={{ borderBottom: "none" }}>
             <Box
               mx={4}
               _hover={{
@@ -123,7 +125,7 @@ const Navbar = () => {
               Sign In
             </Box>
           </ChakraLink>
-          <ChakraLink href="/signup">
+          <ChakraLink href="/signup" _hover={{ borderBottom: "none" }}>
             <Box
               mx={4}
               _hover={{
@@ -150,6 +152,8 @@ const Navbar = () => {
             variant="ghost"
             color="white"
             fontSize="24px"
+            marginBottom={{ base: "10rem", md: "unset" }}
+            _hover={{ backgroundColor: "black", color: "white" }}
           />
           <Drawer
             isOpen={isDrawerOpen}
@@ -161,7 +165,7 @@ const Navbar = () => {
               <DrawerCloseButton color="white" />
               <DrawerHeader color="white">Menu</DrawerHeader>
               <DrawerBody>
-                <ChakraLink href="/">
+                <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
                   <Box
                     py={2}
                     _hover={{
@@ -231,6 +235,7 @@ const Navbar = () => {
             </DrawerContent>
           </Drawer>
         </Box>
+        <Divider opacity="0.3" />
       </Flex>
     </ChakraProvider>
   );
