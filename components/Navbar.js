@@ -33,7 +33,6 @@ const theme = extendTheme({
         bgPosition: "center",
         backgroundRepeat: "no-repeat",
         color: "white",
-        width: "100vw",
         margin: 0,
         padding: 0,
       },
@@ -55,7 +54,7 @@ const Navbar = () => {
   };
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} margin="0">
       <CSSReset />
       <Flex
         as="nav"
@@ -63,13 +62,14 @@ const Navbar = () => {
         justify="space-between"
         wrap="wrap"
         p={4}
-        maxH="10vh"
+        maxH="8vh"
         color="white"
         bg="transparent"
-        maxW="100vw"
+        // maxW="100vw"
         mx={0}
         height={navbarHeight}
         flexDirection="row"
+        width="100%"
       >
         <Box>
           <ChakraLink href="/" _hover={{ borderBottom: "none" }}>
